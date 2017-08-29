@@ -1,0 +1,47 @@
+﻿<script src="/Scripts/global/burgerSideMenu.js"></script>
+
+<header id="class" class="flexHeader">
+    <nav class="headerButtons">
+        <ul class="headerNavList">
+            <li class="headerButton">Garys</li>
+            <li class="headerButton">Home</li>
+            <li class="headerButton">FrontEnd</li>
+            <li class="headerButton">Page</li>
+        </ul>
+        <span onclick="ShowSidebar()">
+            <span class="burger-menu"></span>
+        </span>
+    </nav>
+</header>
+
+<div class="modal">
+    <button class="closeButton" onclick="CloseModal()">Close</button><br/>
+    Oh Rly?
+    
+    <img src="~/Content/Images/trollFace.svg"/>
+
+</div>
+<div class="screen"></div>
+
+<main class="content">
+  
+    <div id="sidebar" class="sidebar">
+        <ul class="sidebarList">
+            <li class="sidebarListItem">More</li>
+            <li class="sidebarListItem">Comic</li>
+            <li class="sidebarListItem">Sans</li>
+            <li class="sidebarListItem">Baaabyy</li>
+        </ul>
+    </div>
+
+    <section id="flexBlocks" class="flexBlocks">
+        @*<h2 hidden="">blocks section</h2> commented out because of using first-child*@
+        <span id="block1" class="flexBlueBlock"></span>
+        <span id="block2" class="flexBlueBlock flexcBlueBlock-center">;P</span>
+        <span id="block3" class="flexBlueBlock"></span>
+    </section>
+</main>
+
+<footer id="bottomBar" class="flexFooter">
+    <a class="aboutUs" onclick="PopModal()">About Us</a>
+</footer>

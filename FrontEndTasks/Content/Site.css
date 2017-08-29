@@ -1,0 +1,352 @@
+﻿.topBar {
+    background-color: gold;    
+    border: black solid 1px; 
+    height: 100px;  
+}
+
+.blocks {
+    margin-top: 120px;
+    text-align: center;
+}
+
+.blueBlock {
+    background-color: lightskyblue;
+    border: black solid 1px; 
+    display: inline-block;
+    height: 250px;
+    width: 175px;
+}
+
+/* this would be nested if i was using scss */
+.blueBlock-center {
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: gold;
+    border: black solid 1px; 
+    height: 100px;
+}
+
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* -------------  FlexBox ----------------------- */
+.content {
+    flex: 1;
+    position: relative;
+}
+
+.flexHeader {
+    display: flex;
+
+    background-color: gold;    
+    border: black solid 1px; 
+    height: 100px;  
+}
+
+.flexFooter {
+    display: flex;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: gold;
+    border: black solid 1px; 
+    height: 100px;
+}
+
+.flexcBlueBlock-center {
+    display: block;
+    border: solid black 1px;
+
+    color: lightskyblue;
+
+    line-height: 250px;
+    text-align: center;
+
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em; 
+
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.flexBlocks {
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 120px; 
+    justify-content: center;
+}
+
+.flexBlueBlock {
+    display: flex;
+    background-color: lightskyblue;
+
+    height: 250px;
+    width: 175px;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+    .headerButton {
+        display: none;
+    }
+
+    .burger-menu {
+        position: relative;
+        padding-left: 1.25em;
+        margin-right: 40px;
+    }
+    .burger-menu:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 1em;
+        width: 3em;
+        height: 0.4em;
+        background: purple;
+        box-shadow: 
+            0 1em 0 0 purple,
+            0 2em 0 0 purple;
+    }
+
+    .flexBlocks {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .flexcBlueBlock-center {
+        border: solid black 1px;
+
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
+
+.headerButtons {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.headerNavList {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    list-style-type: none;
+}
+
+.headerButton:first-of-type {
+    margin-left: 10px;
+}
+
+.headerButton:last-of-type {
+    margin-right: 10px; 
+}
+
+.headerButton {
+    display: flex inline;
+    background-color: black;
+
+    line-height: 75px;
+    text-align: center;
+    
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em; 
+    margin-left: 10px;
+
+    height: 75px;
+    width: 275px
+}
+
+
+.flexBlueBlock:first-child::before {
+    display: flex;
+    align-self: flex-start;
+
+    content: '';
+
+    background-color: white;
+
+    width: 0; 
+    height: 0;
+    
+    border-left: 88px solid transparent;
+    border-right: 88px solid transparent;
+  
+    border-bottom: 88px solid lightskyblue;
+}
+
+.flexBlueBlock:last-child::after {
+    display: flex;
+    align-self: flex-end;
+
+    content: '';
+   
+    background-color: white;
+
+    width: 0; 
+    height: 0; 
+    border-left: 88px solid transparent;
+    border-right: 88px solid transparent;
+  
+    border-top: 88px solid lightskyblue;
+}
+
+.burger-menu {
+    display: inline;
+}
+
+.sidebar {
+    display: block;
+    background-color: green;
+    width: 0;
+    position: absolute;
+
+    transition: width 300ms ease;
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.sidebarList {
+    list-style-type: none;
+}
+
+.sidebarListItem {
+    background-color: red;
+
+    line-height: 75px;
+    text-align: center;
+    
+    color: black;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+
+    margin-top: 10px;
+    margin-left: 40px;
+
+    height: 75px;
+    width: 150px
+}
+
+.aboutUs {
+    position: absolute;
+
+    color: darkorchid;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-right: 40px;
+    right: 0;
+    cursor: pointer;
+}
+
+.modal {
+    width: 300px;
+    height: 300px;
+    display: none;
+    background: white;
+    position: absolute;
+    margin: -150px 0 0 -150px;
+    top: 50%;
+    left: 50%;
+
+    overflow: hidden;
+
+    vertical-align:middle;
+    text-align: center;
+
+    color: tomato;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 2em;
+
+    z-index: 3;
+
+    animation: rotation 2s infinite linear;
+}
+
+.closeButton {
+    background-color:#orange;
+    border:1px solid #dcdcdc;
+    color:#666;
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:middle;
+    font-size:13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height:27px;
+    line-height:27px;
+    min-width:54px;
+    padding:0 8px;
+    text-align:center;
+    text-decoration:none;
+    border-radius:2px;
+}
+
+.screen {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: blueviolet;
+    opacity: 0.9;
+    z-index: 2;
+
+
+    animation: rainbow 1s infinite linear;
+}
+
+@keyframes rainbow {
+    0%, 100% {
+        background: red;
+    }
+    14% {
+        background: orange;
+    }
+    28% {
+        background: yellow;
+    }
+    42% {
+        background: green;
+    }
+    56% {
+        background: blue;
+    }
+    70% {
+        background: purple;
+    }
+    84% {
+        background: violet;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
