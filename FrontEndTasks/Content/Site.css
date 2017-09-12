@@ -33,6 +33,10 @@
     height: 100px;
 }
 
+/* wont work in ie.. i reckon*/
+::-webkit-scrollbar { 
+    display: none; 
+}
 
 .site {
     display: flex;
@@ -215,7 +219,8 @@
 }
 
 .sidebar {
-    display: block;
+    display: none;
+
     background-color: green;
     width: 0;
     position: absolute;
@@ -265,7 +270,7 @@
     height: 300px;
     display: none;
     background: white;
-    position: absolute;
+    position: fixed;
     margin: -150px 0 0 -150px;
     top: 50%;
     left: 50%;

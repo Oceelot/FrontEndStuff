@@ -5,6 +5,7 @@
     var centerBlocks = document.getElementsByClassName("flexcBlueBlock-center");
 
     centerBlocks[0].style.color = "white";
+    sidebar.style.display = "block";
     sidebar.style.width = "300px";
 }
 
