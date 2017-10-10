@@ -1,0 +1,12 @@
+{
+    "parserOptions" : {
+        "sourceType": "module"
+    },
+    "env": {
+        "browser": true,
+        "es6": true 
+    },
+    "rules": {
+        /* all rules are off - i started turning them on and there were lots of errors! we need to address (AT) */
+    }
+}
